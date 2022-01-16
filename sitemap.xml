@@ -60,29 +60,29 @@
 
   <url>
     <loc>https://xuanyuslf.github.io/blog</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2022-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://xuanyuslf.github.io/blog/tags/English/</loc>
-    <lastmod>2022-01-01</lastmod>
+    <loc>https://xuanyuslf.github.io/blog/tags/java/</loc>
+    <lastmod>2022-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://xuanyuslf.github.io/blog/tags/java/</loc>
-    <lastmod>2022-01-01</lastmod>
+    <loc>https://xuanyuslf.github.io/blog/tags/English/</loc>
+    <lastmod>2022-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://xuanyuslf.github.io/blog/tags/QQ-robot/</loc>
-    <lastmod>2022-01-01</lastmod>
+    <lastmod>2022-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

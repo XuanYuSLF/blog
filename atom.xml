@@ -3,11 +3,11 @@
   <title>-XuanYuSLF-</title>
   
   
-  <link href="https://xuanyuslf.ml/atom.xml" rel="self"/>
+  <link href="https://www.xuanyuslf.ml/atom.xml" rel="self"/>
   
-  <link href="https://xuanyuslf.ml/"/>
+  <link href="https://www.xuanyuslf.ml/"/>
   <updated>2022-01-01T11:50:58.922Z</updated>
-  <id>https://xuanyuslf.ml/</id>
+  <id>https://www.xuanyuslf.ml/</id>
   
   <author>
     <name>XuanYuSLF</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>运动心率的判断</title>
-    <link href="https://xuanyuslf.ml/2022/01/01/HHR/"/>
-    <id>https://xuanyuslf.ml/2022/01/01/HHR/</id>
+    <link href="https://www.xuanyuslf.ml/2022/01/01/HHR/"/>
+    <id>https://www.xuanyuslf.ml/2022/01/01/HHR/</id>
     <published>2022-01-01T11:49:10.268Z</published>
     <updated>2022-01-01T11:50:58.922Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-    <category term="java" scheme="https://xuanyuslf.ml/tags/java/"/>
+    <category term="java" scheme="https://www.xuanyuslf.ml/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>英语写作分析</title>
-    <link href="https://xuanyuslf.ml/2021/12/18/writing/"/>
-    <id>https://xuanyuslf.ml/2021/12/18/writing/</id>
+    <link href="https://www.xuanyuslf.ml/2021/12/18/writing/"/>
+    <id>https://www.xuanyuslf.ml/2021/12/18/writing/</id>
     <published>2021-12-18T02:49:45.000Z</published>
     <updated>2021-12-18T03:20:33.000Z</updated>
     
@@ -57,14 +57,14 @@
     
     
     
-    <category term="English" scheme="https://xuanyuslf.ml/tags/English/"/>
+    <category term="English" scheme="https://www.xuanyuslf.ml/tags/English/"/>
     
   </entry>
   
   <entry>
     <title>英语相关整理</title>
-    <link href="https://xuanyuslf.ml/2021/10/13/Engligh-accumulation/"/>
-    <id>https://xuanyuslf.ml/2021/10/13/Engligh-accumulation/</id>
+    <link href="https://www.xuanyuslf.ml/2021/10/13/Engligh-accumulation/"/>
+    <id>https://www.xuanyuslf.ml/2021/10/13/Engligh-accumulation/</id>
     <published>2021-10-13T05:36:23.000Z</published>
     <updated>2021-10-14T03:43:54.000Z</updated>
     
@@ -79,14 +79,14 @@
     
     
     
-    <category term="English" scheme="https://xuanyuslf.ml/tags/English/"/>
+    <category term="English" scheme="https://www.xuanyuslf.ml/tags/English/"/>
     
   </entry>
   
   <entry>
     <title>peach-robot</title>
-    <link href="https://xuanyuslf.ml/2021/09/25/peach-robot/"/>
-    <id>https://xuanyuslf.ml/2021/09/25/peach-robot/</id>
+    <link href="https://www.xuanyuslf.ml/2021/09/25/peach-robot/"/>
+    <id>https://www.xuanyuslf.ml/2021/09/25/peach-robot/</id>
     <published>2021-09-25T05:39:43.000Z</published>
     <updated>2021-10-01T04:31:30.000Z</updated>
     
@@ -101,7 +101,7 @@
     
     
     
-    <category term="QQ-robot" scheme="https://xuanyuslf.ml/tags/QQ-robot/"/>
+    <category term="QQ-robot" scheme="https://www.xuanyuslf.ml/tags/QQ-robot/"/>
     
   </entry>
   

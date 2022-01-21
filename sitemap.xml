@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xuanyuslf.ml/2022/01/21/composition-material/</loc>
+    
+    <lastmod>2022-01-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.xuanyuslf.ml/picture/mc.html</loc>
     
     <lastmod>2022-01-19</lastmod>
@@ -74,7 +81,7 @@
 
   <url>
     <loc>https://www.xuanyuslf.ml/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,21 +89,28 @@
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/English/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/java/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/tags/Chinese/</loc>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/QQ-robot/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

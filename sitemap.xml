@@ -81,36 +81,36 @@
 
   <url>
     <loc>https://www.xuanyuslf.ml/</loc>
-    <lastmod>2022-01-23</lastmod>
+    <lastmod>2022-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.xuanyuslf.ml/tags/Chinese/</loc>
-    <lastmod>2022-01-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/tags/QQ-robot/</loc>
-    <lastmod>2022-01-23</lastmod>
+    <loc>https://www.xuanyuslf.ml/tags/English/</loc>
+    <lastmod>2022-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/java/</loc>
-    <lastmod>2022-01-23</lastmod>
+    <lastmod>2022-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.xuanyuslf.ml/tags/English/</loc>
-    <lastmod>2022-01-23</lastmod>
+    <loc>https://www.xuanyuslf.ml/tags/Chinese/</loc>
+    <lastmod>2022-01-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/tags/QQ-robot/</loc>
+    <lastmod>2022-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -2,79 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.xuanyuslf.ml/picture/mc.html</loc>
-    
-    <lastmod>2022-01-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.xuanyuslf.ml/picture/index.html</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-06-12</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.xuanyuslf.ml/2022/01/01/HHR/</loc>
+    <loc>https://www.xuanyuslf.ml/friends/index.html</loc>
     
-    <lastmod>2022-01-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/2021/12/18/writing/</loc>
-    
-    <lastmod>2021-12-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/about.html</loc>
-    
-    <lastmod>2021-11-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/2021/10/13/Engligh-accumulation/</loc>
-    
-    <lastmod>2021-10-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/2021/09/25/peach-robot/</loc>
-    
-    <lastmod>2021-10-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/categories/index.html</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.xuanyuslf.ml/link/index.html</loc>
-    
-    <lastmod>2021-09-25</lastmod>
+    <lastmod>2022-06-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/index.html</loc>
     
-    <lastmod>2021-09-25</lastmod>
+    <lastmod>2022-06-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/categories/index.html</loc>
+    
+    <lastmod>2022-06-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/about.html</loc>
+    
+    <lastmod>2022-06-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/2021/10/13/Engligh-accumulation/</loc>
+    
+    <lastmod>2022-01-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/2022/02/02/HHR/</loc>
+    
+    <lastmod>2022-01-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/2021/09/25/peach-robot/</loc>
+    
+    <lastmod>2022-01-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.xuanyuslf.ml/2021/12/18/writing/</loc>
+    
+    <lastmod>2022-01-02</lastmod>
     
   </url>
   
 
   <url>
     <loc>https://www.xuanyuslf.ml/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,21 +75,21 @@
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/English/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/java/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.xuanyuslf.ml/tags/QQ-robot/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="StarCrow 的第一个 JAVA 项目 该文章讲述的内容与项目中代码有关(指在其中用到的),本人也是第一次编写 JAVA，若有不对的地方请在评论中指出   这里意旨分享编写 JAVA 文件的一些心得判断语句 基本用法 123456789if (条件)&amp;#123;    内容&amp;#125;else if (条件)&amp;#123;    内容&amp;#125;else&amp;#123;    内容&amp;#125;  交">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运动心率的判断">
+<meta property="og:url" content="https://xuanyuslf.github.io/blog/2023/02/25/HHR/index.html">
+<meta property="og:site_name" content="-StarCrow-">
+<meta property="og:description" content="StarCrow 的第一个 JAVA 项目 该文章讲述的内容与项目中代码有关(指在其中用到的),本人也是第一次编写 JAVA，若有不对的地方请在评论中指出   这里意旨分享编写 JAVA 文件的一些心得判断语句 基本用法 123456789if (条件)&amp;#123;    内容&amp;#125;else if (条件)&amp;#123;    内容&amp;#125;else&amp;#123;    内容&amp;#125;  交">
+<meta property="og:locale">
+<meta property="og:image" content="https://xuanyuslf.github.io/blog/img/404.jpg">
+<meta property="article:published_time" content="2023-02-25T05:02:28.896Z">
+<meta property="article:modified_time" content="2022-10-09T07:50:37.620Z">
+<meta property="article:author" content="XuanYuSLF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xuanyuslf.github.io/blog/img/404.jpg">
+
+
+<title >运动心率的判断</title>
+
+<!-- Favicon -->
+
+    <link href='/blog/img/favicon.svg?v=2.0.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/blog/img/favicon.svg?v=2.0.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='/blog/apple-touch-icon.png?v=2.0.2' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/blog/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/blog/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/blog/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"xuanyuslf.github.io","author":"XuanYuSLF","root":"/blog/","typed_text":["Litte fool"],"theme_version":"2.0.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":true,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2022-10-09 15:50:37"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/blog/css/index.css?v=2.0.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/blog/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/blog/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Starcrow<span>Field</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/blog/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/blog/archives/" target="">
+                    归档
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="https://xuanyuslf.github.io/docs" target="">
+                            个人文档
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="https://xuanyuslf.github.io/game" target="">
+                    游戏
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/blog/links/" target="">
+                    友链
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/blog/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="https://xuanyuslf.github.io/blog/Amino-acid-codon-translation.html" target="">
+                    新项目
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/blog/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            运动心率的判断
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/blog/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/blog/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        StarCrow
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/XuanYuSLF" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+        <a href="https://twitter.com/FieldStarCrow" title="Twitter" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-twitter"></i>
+        </a>
+    
+        <a href="https://osu.ppy.sh/users/20913390" title="osu" rel="nofollow" target="_blank">
+            <i class="iconfont fas fa-circle-notch"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                City:
+            </div>
+            <div class="trm-label trm-label-light">
+                Urumqi
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                Age:
+            </div>
+            <div class="trm-label trm-label-light">
+                17
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:xuanyulvice@outlook.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#StarCrow-的第一个-JAVA-项目"  data-scroll-to="#StarCrow-的第一个-JAVA-项目"><span class="toc-number">1.</span> <span class="toc-text">StarCrow 的第一个 JAVA 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#这里意旨分享编写-JAVA-文件的一些心得"  data-scroll-to="#这里意旨分享编写-JAVA-文件的一些心得"><span class="toc-number">1.1.</span> <span class="toc-text">这里意旨分享编写 JAVA 文件的一些心得</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#判断语句"  data-scroll-to="#判断语句"><span class="toc-number">1.1.1.</span> <span class="toc-text">判断语句</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#使用循环以提高容错率"  data-scroll-to="#使用循环以提高容错率"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用循环以提高容错率</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#使用类与对象以分类语法类型"  data-scroll-to="#使用类与对象以分类语法类型"><span class="toc-number">1.1.3.</span> <span class="toc-text">使用类与对象以分类语法类型</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#其他"  data-scroll-to="#其他"><span class="toc-number">1.1.4.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            02/25
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            13:02
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            XuanYuSLF
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="StarCrow-的第一个-JAVA-项目"><a href="#StarCrow-的第一个-JAVA-项目" class="headerlink" title="StarCrow 的第一个 JAVA 项目"></a>StarCrow 的第一个 JAVA 项目</h1><blockquote>
+<p>该文章讲述的内容与项目中代码有关(指在其中用到的),本人也是第一次编写 JAVA，若有不对的地方请在评论中指出</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/XuanYuSLF/HHR-Monitoring"><img src="https://github-readme-stats.vercel.app/api/pin/?username=XuanYuSLF&repo=HHR-Monitoring" alt="Readme Card" loading="lazy" onerror='this.onerror=null;this.src="/blog/img/404.jpg"'></a></p>
+<h2 id="这里意旨分享编写-JAVA-文件的一些心得"><a href="#这里意旨分享编写-JAVA-文件的一些心得" class="headerlink" title="这里意旨分享编写 JAVA 文件的一些心得"></a>这里意旨分享编写 JAVA 文件的一些心得</h2><h3 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h3><ol>
+<li><p>基本用法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件)&#123;</span><br><span class="line">    内容</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (条件)&#123;</span><br><span class="line">    内容</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    内容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>交并</p>
+<blockquote>
+<p><strong>JAVA</strong>语言中””&amp;&amp;””和””||””分别表示”<strong>和</strong>“,”<strong>或</strong>“</p>
+</blockquote>
+<p>如项目中(<strong><em>代码为项目中的局部代码</em></strong>)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">220</span> - age &gt;= currentHeartRate &amp;&amp; currentHeartRate &gt;= <span class="number">40</span>) &#123;</span><br><span class="line">    <span class="comment">/*这里引用&amp;&amp;以表示这两者的交集,也就是所谓的&quot;和&quot;*/</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;输入错误请重新输入&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Objects.equals(heart, <span class="string">&quot;有&quot;</span>) || Objects.equals(heart, <span class="string">&quot;无&quot;</span>)) &#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">/*这里引用||以表示这两者的并集，也就是所谓的&quot;或&quot;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;输入错误,请重新输入&quot;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断字符串类型</p>
+<p>在 JAVA 中不能像 PYTHON 中使用双引号“”直接引用字符串而直接进行判断，而是使用 equals 方法:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Objects.equals(变量名称, <span class="string">&quot;所要判断的字符串&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Objects.equals(heart, <span class="string">&quot;有&quot;</span>) || Objects.equals(heart, <span class="string">&quot;无&quot;</span>)) &#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">/*这里判断，表示如果变量heart==&quot;有&quot;或者&quot;无&quot;，则打断循环，这里循环的作用正是调高容错率，会在下文说明*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;输入错误,请重新输入&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="使用循环以提高容错率"><a href="#使用循环以提高容错率" class="headerlink" title="使用循环以提高容错率"></a>使用循环以提高容错率</h3><ul>
+<li><p>提高容错率的<strong>必要性</strong>: 若一个人在输入相关数据时，中间应不小心输错一个，在没有提高容错率会导致程序报错而终止程序,从而要重启程序重新输入,所以为了使使用者能有更好的体验,应提高容纳错率</p>
+</li>
+<li><p>本项目主要提高输入的容错率(<a href="#%E5%85%B6%E4%BB%96">输入语句</a>在下文中指出)</p>
+<h4 id="使用-while-语句达到提高输入的容错率"><a href="#使用-while-语句达到提高输入的容错率" class="headerlink" title="使用 while 语句达到提高输入的容错率"></a>使用 while 语句达到提高输入的容错率</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*使while的布尔值为true,即循环打开*/</span></span><br><span class="line"></span><br><span class="line">    <span class="type">Scanner</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">    System.out.print(<span class="string">&quot;请输入当前心率=&quot;</span>);</span><br><span class="line">    currentHeartRate = c.nextInt();</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">220</span> - age &gt;= currentHeartRate &amp;&amp; currentHeartRate &gt;= <span class="number">40</span>) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="comment">/*若if的条件满足，则终端循环继续执行后面的代码*/</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入错误请重新输入&quot;</span>);</span><br><span class="line">        <span class="comment">/*若if的条件不满足，而显示&quot;输入错误请重新输入&quot;,之后返回到循环体的第一步*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="使用类与对象以分类语法类型"><a href="#使用类与对象以分类语法类型" class="headerlink" title="使用类与对象以分类语法类型"></a>使用类与对象以分类语法类型</h3><ul>
+<li><p>本项目主要使用了 4 个类(Main,judge,formula,input),分别为主类(代码的运行过程)、判断(用于书写判断语句)、公式(用于数值带入公式计算)、输入(用于数据的输入,即用户与程序的交互)</p>
+</li>
+<li><p>这样写可使项目具有条理性，逻辑更清晰，更好的书写代码，使代码更美观</p>
+<h4 id="如何在主类中引用其他类中的方法"><a href="#如何在主类中引用其他类中的方法" class="headerlink" title="如何在主类中引用其他类中的方法"></a>如何在主类中引用其他类中的方法</h4><ol>
+<li><p>在其他类中创建一个静态方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 方法名()&#123;</span><br><span class="line">    内容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在主类中引用方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名.方法名();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="如何在主类中使用其他类的变量"><a href="#如何在主类中使用其他类的变量" class="headerlink" title="如何在主类中使用其他类的变量"></a>如何在主类中使用其他类的变量</h4><ol>
+<li><p>在其他类中定义一个全局静态变量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> 变量类型 变量名称;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在主变量(或其他变量)中引用其他类变量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名.类名下的变量名</span><br></pre></td></tr></table></figure>
+
+<p>如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (input.age&gt;=<span class="number">40</span>)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*input.age 即表示在input类下的age所赋的值*/</span></span><br><span class="line"></span><br><span class="line">    formula.heartRate();</span><br><span class="line">    judge.highAge();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*formula.hearRate(); 即表示引用formula类下的heartRate方法*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li><p>驼峰命名法</p>
+<p>若你想在代码中命名一个为 heart rate 的变量</p>
+<blockquote>
+<p>在代码中应这样写 heartRate</p>
+<p>规则:当一个变量名称超过 2 个单词时，第一个单词的首字母小写，后面的单词首字母大写</p>
+</blockquote>
+</li>
+<li><p>Java 中的输入语句</p>
+<ul>
+<li><p>使用<a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-scanner-class.html">Scanner 类</a>← 更多详情点这里</p>
+<p>基本用法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Scanner 名称 = <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">System.out.print(<span class="string">&quot;内容&quot;</span>)</span><br><span class="line">    <span class="comment">/*用于提示所需要输入的内容*/</span></span><br><span class="line">变量 = 名称.nextInt();</span><br><span class="line"><span class="comment">/*nextInt:整型</span></span><br><span class="line"><span class="comment">  nextFloat:浮点型</span></span><br><span class="line"><span class="comment">  next:字符串(本人理解)*/</span></span><br></pre></td></tr></table></figure>
+
+<p>下段引用于<a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a></p>
+<blockquote>
+<p>next():</p>
+<ul>
+<li>1、一定要读取到有效字符后才可以结束输入。</li>
+<li>2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
+<li>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。</li>
+<li>next() 不能得到带有空格的字符串。</li>
+</ul>
+<p>nextLine()：</p>
+<ul>
+<li>1、以 Enter 为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。</li>
+<li>2、可以获得空白。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+
+</article>
+    
+    
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
+            
+            <a class="trm-op-top trm-anima-link" href="/blog/2023/02/25/hello-world/">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="/blog/img/block.jpg">
+                </span>
+                <h6 class="trm-op-title">Hello World</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/02/25</li>
+                <li>12:43</li>
+                <li>Hello</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+    <div id="giscus-wrap" class="trm-card trm-scroll-animation comment-container" data-scroll data-scroll-offset="50"></div>
+<script data-swup-reload-script>
+    function loadGiscus() {
+        let nowTheme = document.documentElement.classList.contains('dark') ? '' : ''
+        const config = {
+            src: 'https://giscus.app/client.js',
+            "data-repo": 'XuanYuSLF/blog',
+            "data-repo-id": 'MDEwOlJlcG9zaXRvcnk0MDg0ODU0NDk=',
+            "data-category": 'General',
+            "data-category-id": 'DIC_kwDOGFj-Sc4CPnd1',
+            "data-mapping": 'pathname',
+            "data-reactions-enabled": '1',
+            "data-emit-metadata": '0',
+            "data-theme": nowTheme,
+            "data-lang": 'zh-CN',
+            crossorigin: "anonymous",
+            async: true
+        }
+        let ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').insertAdjacentElement('afterbegin', ele)
+    }
+
+    function changeGiscusTheme() {
+        let theme = document.documentElement.classList.contains('dark') ? '' : ''
+
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+
+    loadGiscus();
+</script>
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+<script src="https://unpkg.com/swup@2.0.19/dist/swup.min.js"></script>
+
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/blog/js/plugins/typing.js?v=2.0.2"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <script>
+        "serviceWorker" in navigator ?
+        navigator.serviceWorker.register('/blog/sw.js').then(function () {
+            navigator.serviceWorker.controller ? 
+             console.log("Assets cached by the controlling service worker.") :
+             console.log("Please reload this page to allow the service worker to handle network operations.")
+        }).catch(function (e) {
+            console.log("ERROR: " + e)
+        }) : console.log("Service workers are not supported in the current browser.")
+    </script>
+
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/blog/js/main.js?v=2.0.2"></script>
+
+</body>
+
+</html>

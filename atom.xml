@@ -6,7 +6,7 @@
   <link href="http://blog.enstar.tech/atom.xml" rel="self"/>
   
   <link href="http://blog.enstar.tech/"/>
-  <updated>2025-01-11T11:46:30.064Z</updated>
+  <updated>2025-01-11T11:48:59.097Z</updated>
   <id>http://blog.enstar.tech/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用YUZU模拟器游玩王国之泪</title>
+    <link href="http://blog.enstar.tech/2025/01/11/yuzu-tears-of-the-kingdom/"/>
+    <id>http://blog.enstar.tech/2025/01/11/yuzu-tears-of-the-kingdom/</id>
+    <published>2025-01-11T10:57:36.000Z</published>
+    <updated>2025-01-11T11:48:59.097Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>注: 本文章内容部分来自于网络，且不给予任何下载渠道</p></blockquote><h2 id="1-资源准备"><a href="#1-资源准备" class="headerlink" title="1. 资源准备"></a>1. 资源准备</h2><ul><li>YUZU-EA模拟器本体。</li><li>王国之泪v1.0.0游戏本体。</li><li>王国之泪v1.1.2升级补丁。</li><li>解锁FPS及其画质补丁相关MOD。</li><li>密钥文件及其固件。</li></ul><h2 id="2-安装YUZU-EA模拟器"><a href="#2-安装YUZU-EA模拟器" class="headerlink" title="2. 安装YUZU-EA模拟器"></a>2. 安装YUZU-EA模拟器</h2><ol><li>解压<strong>yuzu-windows-msvc-early-access</strong>压缩包到自己所定的位置。</li><li>在本体下创建user文件夹，以便生成的配置文件在模拟器本体目录下。</li><li>启动一次文件夹，使配置文件生成，任何弹窗都不用关，打开之后关闭即可。</li><li><ul><li>进入 *<em>user\keys*</em> ，将密钥文件置于此处(文件后缀为.keys)。</li><li>进入<strong>user\nand\system\Contents\registered&#x2F;</strong>,将固件至于此处(文件类型为:很多个文件夹)。</li></ul></li><li>打开模拟器，无弹窗提示即为配置成功。</li></ol><h2 id="3-导入游戏及其进行升级"><a href="#3-导入游戏及其进行升级" class="headerlink" title="3. 导入游戏及其进行升级"></a>3. 导入游戏及其进行升级</h2><ol><li>打开模拟器</li><li>按提界面提示添加游戏目录，选择游戏本体所在目录位置。</li><li>选择对应游戏，单击左上角文件，选择<strong>安装文件到NAND</strong>，选择升级补丁进行安装即可。</li></ol><h2 id="4-安装游戏体验增强MOD"><a href="#4-安装游戏体验增强MOD" class="headerlink" title="4. 安装游戏体验增强MOD"></a>4. 安装游戏体验增强MOD</h2><ol><li>在模拟器主界面右键游戏，点击<strong>打开MOD数据位置</strong>。</li><li>将mod压缩包解压到此处即可。</li></ol><h2 id="5-一些基本的设置-个人推荐设置"><a href="#5-一些基本的设置-个人推荐设置" class="headerlink" title="5. 一些基本的设置(个人推荐设置)"></a>5. 一些基本的设置(个人推荐设置)</h2><p>通过 <strong>导航栏-模拟-设置</strong> 进入设置界面</p><p><img src="https://images.enstar.tech/file/AgACAgUAAyEGAASNTiqvAAMJZ4JUyQ4kypPI9nQggXfy6BTecjAAAnTEMRtJehBUiafN-42-og4BAAMCAAN5AAM2BA.png" alt="1" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p><p><img src="https://images.enstar.tech/file/AgACAgUAAyEGAASNTiqvAAMKZ4JU1owQC6RYrncCe4U98A0VewUAAnXEMRtJehBU9QOGLSjEPlUBAAMCAAN5AAM2BA.png" alt="2" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p><p><img src="https://images.enstar.tech/file/AgACAgUAAyEGAASNTiqvAAMLZ4JU3CSakPXyeg8pnlOnSZU9hIcAAnbEMRtJehBU9vve10kRBJQBAAMCAAN5AAM2BA.png" alt="3" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p><p><img src="https://images.enstar.tech/file/AgACAgUAAyEGAASNTiqvAAMMZ4JU4g6dxgaAUXHZFlq8Qp_43H0AAnfEMRtJehBU2Kz64rNvxTABAAMCAAN5AAM2BA.png" alt="4" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p><p><img src="https://images.enstar.tech/file/AgACAgUAAyEGAASNTiqvAAMNZ4JU5jhuVoF4f-ZVwoiJpILEn4sAAnjEMRtJehBUzC7D41srWggBAAMCAAN5AAM2BA.png" alt="5" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;注: 本文章内容部分来自于网络，且不给予任何下载渠道&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-资源准备&quot;&gt;&lt;a href=&quot;#1-资源准备&quot; class=&quot;headerlink&quot; title=&quot;1. 资源准备&quot;&gt;&lt;/a&gt;1. 资源准</summary>
+      
+    
+    
+    
+    
+    <category term="游戏" scheme="http://blog.enstar.tech/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="教程" scheme="http://blog.enstar.tech/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux下破解安装Typora</title>
